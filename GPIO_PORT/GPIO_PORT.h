@@ -16,7 +16,7 @@
 
 /* GPIO port class */
 class GPIO_PORT {
-    public:
+    protected:
         #if ENABLE_GPIO_WRITTE | ENABLE_GPIO_READ
         void _GPIO_init(uint8_t pin);
         #if ENABLE_GPIO_WRITTE

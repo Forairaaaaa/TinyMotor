@@ -2,6 +2,9 @@
 #define _DRV8837_H_
 
 #include "../GPIO_PORT/GPIO_PORT.h"
+#ifdef ARDUINO
+#include <Arduino.h>
+#endif
 
 /* DRV883x control pin config */
 #define PIN_M1_A 3
