@@ -1,7 +1,7 @@
 #ifndef _DRV8837_H_
 #define _DRV8837_H_
 
-#include "../GPIO_PORT/GPIO_PORT.h"
+#include "../../HARDWARE-PORT/HARDWARE_PORT.h"
 #ifdef ARDUINO
 #include <Arduino.h>
 #endif
@@ -11,6 +11,12 @@
 #define PIN_M1_B 4
 #define PIN_M2_A 1
 #define PIN_M2_B 0
+
+/* Motor PWM channel config */
+#define PWM_CHAN_M1_A 2
+#define PWM_CHAN_M1_B 3
+#define PWM_CHAN_M2_A 4
+#define PWM_CHAN_M2_B 5
 
 /* Motor direction reverse set */
 #define REVERSE_M1 0

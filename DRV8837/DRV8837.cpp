@@ -6,10 +6,10 @@
  */
 void DRV8837::begin() {
     /* PWM init */
-    _GPIO_PWM_init(PIN_M1_A, 1);
-    _GPIO_PWM_init(PIN_M1_B, 2);
-    _GPIO_PWM_init(PIN_M2_A, 3);
-    _GPIO_PWM_init(PIN_M2_B, 4);
+    _GPIO_PWM_init(PIN_M1_A, PWM_CHAN_M1_A);
+    _GPIO_PWM_init(PIN_M1_B, PWM_CHAN_M1_B);
+    _GPIO_PWM_init(PIN_M2_A, PWM_CHAN_M2_A);
+    _GPIO_PWM_init(PIN_M2_B, PWM_CHAN_M2_B);
 }
 
 /**
@@ -87,11 +87,11 @@ void DRV8837::brake(MOTOR motor) {
  * @param M1_B_duty 
  */
 void DRV8837::_update_M1_duty(uint8_t M1_A_duty, uint8_t M1_B_duty) {
-    _GPIO_PWM_setDuty(1, M1_A_duty);
-    _GPIO_PWM_setDuty(2, M1_B_duty);
+    _GPIO_PWM_setDuty(PWM_CHAN_M1_A, M1_A_duty);
+    _GPIO_PWM_setDuty(PWM_CHAN_M1_B, M1_B_duty);
 }
 
 void DRV8837::_update_M2_duty(uint8_t M2_A_duty, uint8_t M2_B_duty) {
-    _GPIO_PWM_setDuty(3, M2_A_duty);
-    _GPIO_PWM_setDuty(4, M2_B_duty);
+    _GPIO_PWM_setDuty(PWM_CHAN_M2_A, M2_A_duty);
+    _GPIO_PWM_setDuty(PWM_CHAN_M2_B, M2_B_duty);
 }
