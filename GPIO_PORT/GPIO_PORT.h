@@ -11,7 +11,7 @@
 #define ENABLE_GPIO_PWM    1
 
 /* PWM config */
-#define PWM_FREQ       12000
+#define PWM_FREQ       5000
 #define PWM_RESOLUTION 8
 
 /* GPIO port class */
